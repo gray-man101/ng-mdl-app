@@ -1,138 +1,100 @@
-<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-  <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+  <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Home</span>
-      <div class="mdl-layout-spacer"></div>
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-        <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+          <span class="android-title mdl-layout-title">
+            <img class="android-logo-image" src="images/android-logo.png">
+          </span>
+      <!-- Add spacer, to align navigation to the right in desktop -->
+      <div class="android-header-spacer mdl-layout-spacer"></div>
+      <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+        <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
           <i class="material-icons">search</i>
         </label>
         <div class="mdl-textfield__expandable-holder">
-          <input class="mdl-textfield__input" type="text" id="search">
-          <label class="mdl-textfield__label" for="search">Enter your query...</label>
+          <input class="mdl-textfield__input" type="text" id="search-field">
         </div>
       </div>
-      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+      <!-- Navigation -->
+      <div class="android-navigation-container">
+        <nav class="android-navigation mdl-navigation">
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Phones</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Tablets</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Wear</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">TV</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Auto</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">One</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Play</a>
+        </nav>
+      </div>
+      <span class="android-mobile-title mdl-layout-title">
+            <img class="android-logo-image" src="images/android-logo.png">
+          </span>
+      <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
         <i class="material-icons">more_vert</i>
       </button>
-      <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-        <li class="mdl-menu__item">About</li>
-        <li class="mdl-menu__item">Contact</li>
-        <li class="mdl-menu__item">Legal information</li>
+      <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+        <li class="mdl-menu__item">5.0 Lollipop</li>
+        <li class="mdl-menu__item">4.4 KitKat</li>
+        <li disabled class="mdl-menu__item">4.3 Jelly Bean</li>
+        <li class="mdl-menu__item">Android History</li>
       </ul>
     </div>
-  </header>
-  <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-    <header class="demo-drawer-header">
-      <div class="demo-avatar-dropdown">
-        <span>hello@example.com</span>
-        <div class="mdl-layout-spacer"></div>
-        <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-          <i class="material-icons" role="presentation">arrow_drop_down</i>
-          <span class="visuallyhidden">Accounts</span>
-        </button>
-        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-          <li class="mdl-menu__item">hello@example.com</li>
-          <li class="mdl-menu__item">info@example.com</li>
-          <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
-        </ul>
-      </div>
-    </header>
-    <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Inbox</a>
-      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Trash</a>
-      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Spam</a>
-      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Forums</a>
-      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Updates</a>
-      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Promos</a>
-      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Purchases</a>
-      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Social</a>
-      <div class="mdl-layout-spacer"></div>
-      <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
+  </div>
+
+  <div class="android-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title">
+          <img class="android-logo-image" src="images/android-logo-white.png">
+        </span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="/">Home</a>
+      <a class="mdl-navigation__link" href="">Tablets</a>
+      <a class="mdl-navigation__link" href="">Wear</a>
+      <a class="mdl-navigation__link" href="">TV</a>
+      <a class="mdl-navigation__link" href="">Auto</a>
+      <a class="mdl-navigation__link" href="">One</a>
+      <a class="mdl-navigation__link" href="">Play</a>
     </nav>
   </div>
-  <main class="mdl-layout__content mdl-color--grey-100">
-    <div class="mdl-grid demo-content">
-      <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-        <a [routerLink]="'/company/1'">Company</a>
-        <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
-          <use xlink:href="#piechart" mask="url(#piemask)" />
-          <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle" dy="0.1">82<tspan font-size="0.2" dy="-0.07">%</tspan></text>
-        </svg>
-        <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
-          <use xlink:href="#piechart" mask="url(#piemask)" />
-          <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle" dy="0.1">82<tspan dy="-0.07" font-size="0.2">%</tspan></text>
-        </svg>
-        <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
-          <use xlink:href="#piechart" mask="url(#piemask)" />
-          <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle" dy="0.1">82<tspan dy="-0.07" font-size="0.2">%</tspan></text>
-        </svg>
-        <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
-          <use xlink:href="#piechart" mask="url(#piemask)" />
-          <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle" dy="0.1">82<tspan dy="-0.07" font-size="0.2">%</tspan></text>
-        </svg>
-      </div>
-      <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
-        <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-          <use xlink:href="#chart" />
-        </svg>
-        <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-          <use xlink:href="#chart" />
-        </svg>
-      </div>
-      <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-        <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
-          <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
-            <h2 class="mdl-card__title-text">Updates</h2>
-          </div>
-          <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-            Non dolore elit adipisicing ea reprehenderit consectetur culpa.
-          </div>
-          <div class="mdl-card__actions mdl-card--border">
-            <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>
-          </div>
-        </div>
-        <div class="demo-separator mdl-cell--1-col"></div>
-        <div class="demo-options mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
-          <div class="mdl-card__supporting-text mdl-color-text--blue-grey-50">
-            <h3>View options</h3>
-            <ul>
-              <li>
-                <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                  <input type="checkbox" id="chkbox1" class="mdl-checkbox__input">
-                  <span class="mdl-checkbox__label">Click per object</span>
-                </label>
-              </li>
-              <li>
-                <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                  <input type="checkbox" id="chkbox2" class="mdl-checkbox__input">
-                  <span class="mdl-checkbox__label">Views per object</span>
-                </label>
-              </li>
-              <li>
-                <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                  <input type="checkbox" id="chkbox3" class="mdl-checkbox__input">
-                  <span class="mdl-checkbox__label">Objects selected</span>
-                </label>
-              </li>
-              <li>
-                <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                  <input type="checkbox" id="chkbox4" class="mdl-checkbox__input">
-                  <span class="mdl-checkbox__label">Objects viewed</span>
-                </label>
-              </li>
-            </ul>
-          </div>
-          <div class="mdl-card__actions mdl-card--border">
-            <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--blue-grey-50">Change location</a>
-            <div class="mdl-layout-spacer"></div>
-            <i class="material-icons">location_on</i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-</div>
 
-<router-outlet></router-outlet>
+  <div class="android-content mdl-layout__content">
+    <div class="center-items">
+      <router-outlet></router-outlet>
+    </div>
+    <footer class="android-footer mdl-mega-footer">
+      <div class="mdl-mega-footer--top-section">
+        <div class="mdl-mega-footer--left-section">
+          <button class="mdl-mega-footer--social-btn"></button>
+          &nbsp;
+          <button class="mdl-mega-footer--social-btn"></button>
+          &nbsp;
+          <button class="mdl-mega-footer--social-btn"></button>
+        </div>
+        <div class="mdl-mega-footer--right-section">
+          Something on the right side
+        </div>
+      </div>
+
+      <div class="mdl-mega-footer--middle-section">
+        <p class="mdl-typography--font-light">Satellite imagery: © 2014 Astrium, DigitalGlobe</p>
+        <p class="mdl-typography--font-light">Some features and devices may not be available in all areas</p>
+      </div>
+
+      <div class="mdl-mega-footer--bottom-section">
+        <a class="android-link android-link-menu mdl-typography--font-light" id="version-dropdown">
+          Versions
+          <i class="material-icons">arrow_drop_up</i>
+        </a>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
+          <li class="mdl-menu__item">5.0 Lollipop</li>
+          <li class="mdl-menu__item">4.4 KitKat</li>
+          <li class="mdl-menu__item">4.3 Jelly Bean</li>
+          <li class="mdl-menu__item">Android History</li>
+        </ul>
+        <a class="android-link mdl-typography--font-light" href="">Blog</a>
+        <a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
+      </div>
+
+    </footer>
+  </div>
+</div>
