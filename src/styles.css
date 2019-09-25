@@ -3,6 +3,7 @@
 
 body {
   margin: 0;
+  background-color: #2f2f2f;
 }
 
 /* Disable ugly boxes around images in IE10 */
@@ -56,7 +57,7 @@ a img{
 
 .android-header {
   overflow: visible;
-  background-color: white;
+  background-color: #4a4949;
 }
 
 .android-header .material-icons {
@@ -404,7 +405,7 @@ a img{
 }
 
 .android-footer {
-  background-color: #fafafa;
+  background-color: #4a4949;
   position: relative;
 }
 
@@ -514,4 +515,8 @@ a img{
   .android-footer .mdl-mega-footer--bottom-section {
     display: none;
   }
+}
+
+.mdl-cell {
+  background-color: #252525;
 }
