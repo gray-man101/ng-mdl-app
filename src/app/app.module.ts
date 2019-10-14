@@ -1,10 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { CompanyComponent } from './company/company.component';
-import { HomeComponent } from './home/home.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {CompanyComponent} from './company/company.component';
+import {HomeComponent} from './home/home.component';
+import {MdlSnackbarModule, MdlTextFieldModule} from "@angular-mdl/core";
 
 @NgModule({
   declarations: [
@@ -14,9 +15,12 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MdlTextFieldModule,
+    MdlSnackbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {MdlSnackbarService} from "@angular-mdl/core";
 
 @Component({
   selector: 'demo-content',
@@ -7,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompanyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mdlSnackbarService: MdlSnackbarService) {
+  }
 
   ngOnInit() {
-    console.log('aaaaaa');
+  }
+
+  showSnackbar() {
+    this.mdlSnackbarService.showSnackbar({
+      message: 'The Message',
+      action: {
+        handler: () => {
+          this.mdlSnackbarService.showToast('You hit the ok Button');
+        },
+        text: 'OK'
+      }
+    });
   }
 
 }
