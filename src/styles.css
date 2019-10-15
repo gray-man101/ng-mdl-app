@@ -106,3 +106,14 @@
 .blog-card p:first-of-type {
   margin-top: 1.25rem;
 }
+
+#demo-toast-example {
+  max-width: 100%;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .mdl-snackbar {
+    display: none;
+  }
+}

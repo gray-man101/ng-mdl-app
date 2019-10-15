@@ -8,13 +8,20 @@ import {MdlSnackbarService} from "@angular-mdl/core";
 })
 export class CompanyComponent implements OnInit {
 
+  cartLink: HTMLSpanElement;
+  selectedProductCount: number = 0;
+
   constructor(private mdlSnackbarService: MdlSnackbarService) {
   }
 
   ngOnInit() {
+    this.cartLink = document.querySelector('#shopping-cart-link');
   }
 
   showSnackbar() {
+    this.selectedProductCount++;
+    this.cartLink.parentElement.style.backgroundColor = '#f75454';
+    this.cartLink.setAttribute('data-badge', String(this.selectedProductCount));
     this.mdlSnackbarService.showSnackbar({
       message: 'The Message',
       action: {
