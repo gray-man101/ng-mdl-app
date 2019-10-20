@@ -25,7 +25,9 @@
           <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Auto</a>
           <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">One</a>
           <div class="mdl-navigation__link mdl-typography--text-uppercase">
-            <span id="shopping-cart-link" onclick="console.log('aaaaabbb');" class="mdl-badge mdl-badge--overlap">Cart</span>
+            <button (click)="router.navigate(['/shopping-cart']);">
+              <span id="shopping-cart-link" onclick="console.log('aaaaabbb');" class="mdl-badge mdl-badge--overlap">Cart</span>
+            </button>
           </div>
         </nav>
       </div>
