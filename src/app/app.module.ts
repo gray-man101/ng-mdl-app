@@ -6,7 +6,8 @@ import {AppComponent} from './app.component';
 import {CompanyComponent} from './company/company.component';
 import {HomeComponent} from './home/home.component';
 import {MdlSnackbarModule, MdlTextFieldModule} from "@angular-mdl/core";
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import {ShoppingCartComponent} from './shopping-cart/shopping-cart.component';
+import {ShoppingCartService} from "./shopping-cart/shopping-cart.service";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     MdlTextFieldModule,
     MdlSnackbarModule
   ],
-  providers: [],
+  providers: [ShoppingCartService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

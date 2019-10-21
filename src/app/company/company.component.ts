@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MdlSnackbarService} from "@angular-mdl/core";
+import {ShoppingCartService} from "../shopping-cart/shopping-cart.service";
 
 @Component({
   selector: 'demo-content',
@@ -8,29 +8,10 @@ import {MdlSnackbarService} from "@angular-mdl/core";
 })
 export class CompanyComponent implements OnInit {
 
-  cartLink: HTMLSpanElement;
-  selectedProductCount: number = 0;
-
-  constructor(private mdlSnackbarService: MdlSnackbarService) {
+  constructor(private shoppingCartService: ShoppingCartService) {
   }
 
   ngOnInit() {
-    this.cartLink = document.querySelector('#shopping-cart-link');
-  }
-
-  showSnackbar() {
-    this.selectedProductCount++;
-    this.cartLink.parentElement.style.backgroundColor = '#f75454';
-    this.cartLink.setAttribute('data-badge', String(this.selectedProductCount));
-    this.mdlSnackbarService.showSnackbar({
-      message: 'The Message',
-      action: {
-        handler: () => {
-          this.mdlSnackbarService.showToast('You hit the ok Button');
-        },
-        text: 'OK'
-      }
-    });
   }
 
 }

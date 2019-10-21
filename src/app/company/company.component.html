@@ -94,8 +94,11 @@
     <h2>Opening a door to the future</h2>
     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     <p class="read-more">
-      <a (click)="showSnackbar()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
-        Get retarded
+      <a [hidden]="shoppingCartService.cartContains('a')" (click)="shoppingCartService.addToCart('a')" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
+        Add
+      </a>
+      <a [hidden]="!shoppingCartService.cartContains('a')" (click)="shoppingCartService.removeFromCart('a')" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
+        Remove
       </a>
     </p>
   </div>
@@ -110,8 +113,11 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
       praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
     <p class="read-more">
-      <a (click)="showSnackbar()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
-        Show snackbar
+      <a [hidden]="shoppingCartService.cartContains('b')" (click)="shoppingCartService.addToCart('b')" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
+        Add
+      </a>
+      <a [hidden]="!shoppingCartService.cartContains('b')" (click)="shoppingCartService.removeFromCart('b')" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
+        Remove
       </a>
     </p>
   </div>
@@ -125,7 +131,7 @@
     <h2>Opening a door to the future</h2>
     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     <p class="read-more">
-      <a (click)="showSnackbar()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more" href="">
         Get retarded
       </a>
     </p>
@@ -141,8 +147,8 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
       praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
     <p class="read-more">
-      <a (click)="showSnackbar()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
-        Show snackbar
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more" href="">
+        Get retarded
       </a>
     </p>
   </div>
@@ -156,7 +162,7 @@
     <h2>Opening a door to the future</h2>
     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     <p class="read-more">
-      <a (click)="showSnackbar()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more" href="">
         Get retarded
       </a>
     </p>
@@ -172,8 +178,8 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
       praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
     <p class="read-more">
-      <a (click)="showSnackbar()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
-        Show snackbar
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more" href="">
+        Get retarded
       </a>
     </p>
   </div>
@@ -187,7 +193,7 @@
     <h2>Opening a door to the future</h2>
     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     <p class="read-more">
-      <a (click)="showSnackbar()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more" href="">
         Get retarded
       </a>
     </p>
@@ -203,8 +209,8 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
       praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
     <p class="read-more">
-      <a (click)="showSnackbar()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
-        Show snackbar
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more" href="">
+        Get retarded
       </a>
     </p>
   </div>
@@ -218,7 +224,7 @@
     <h2>Opening a door to the future</h2>
     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     <p class="read-more">
-      <a (click)="showSnackbar()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more" href="">
         Get retarded
       </a>
     </p>
@@ -234,8 +240,8 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
       praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
     <p class="read-more">
-      <a (click)="showSnackbar()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
-        Show snackbar
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more" href="">
+        Get retarded
       </a>
     </p>
   </div>
@@ -249,55 +255,8 @@
     <h2>Opening a door to the future</h2>
     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     <p class="read-more">
-      <a (click)="showSnackbar()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more" href="">
         Get retarded
-      </a>
-    </p>
-  </div>
-</div>
-<div class="company-item alt">
-  <div class="meta">
-    <div class="photo" style="background-image: url('../../assets/pic3.png')"></div>
-  </div>
-  <div class="description">
-    <h1>Mastering the Language</h1>
-    <h2>Java is not the same as JavaScript</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
-      praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-    <p class="read-more">
-      <a (click)="showSnackbar()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
-        Show snackbar
-      </a>
-    </p>
-  </div>
-</div>
-<div class="company-item">
-  <div class="meta">
-    <div class="photo" style="background-image: url('../../assets/pic3.png')"></div>
-  </div>
-  <div class="description">
-    <h1>Learning to Code</h1>
-    <h2>Opening a door to the future</h2>
-    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-    <p class="read-more">
-      <a (click)="showSnackbar()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
-        Get retarded
-      </a>
-    </p>
-  </div>
-</div>
-<div class="company-item alt">
-  <div class="meta">
-    <div class="photo" style="background-image: url('../../assets/pic3.png')"></div>
-  </div>
-  <div class="description">
-    <h1>Mastering the Language</h1>
-    <h2>Java is not the same as JavaScript</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
-      praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-    <p class="read-more">
-      <a (click)="showSnackbar()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect read-more">
-        Show snackbar
       </a>
     </p>
   </div>
