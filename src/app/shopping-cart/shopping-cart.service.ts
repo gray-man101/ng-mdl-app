@@ -4,7 +4,7 @@ import {MdlSnackbarService} from "@angular-mdl/core";
 @Injectable()
 export class ShoppingCartService {
 
-  cartItems: Set<string> = new Set();
+  private cartItems: Set<string> = new Set();
 
   constructor(private mdlSnackbarService: MdlSnackbarService) {
   }

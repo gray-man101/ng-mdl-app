@@ -24,11 +24,15 @@
           <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">TV</a>
           <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Auto</a>
           <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">One</a>
-          <a *ngIf="shoppingCartService.cartItems.size > 0" href="/shopping-cart" class="mdl-navigation__link mdl-typography--text-uppercase"
+          <a *ngIf="shoppingCartService.cartItems.size > 0"
+             [routerLink]="['/shopping-cart']" [state]="shoppingCartService.cartItems"
+             class="mdl-navigation__link mdl-typography--text-uppercase"
              style="background-color: #f75454">
             <span [attr.data-badge]="shoppingCartService.cartItems.size" class="mdl-badge mdl-badge--overlap">Cart</span>
           </a>
-          <a *ngIf="shoppingCartService.cartItems.size == 0" href="/shopping-cart" class="mdl-navigation__link mdl-typography--text-uppercase">
+          <a *ngIf="shoppingCartService.cartItems.size == 0"
+             [routerLink]="['/shopping-cart']" [state]="shoppingCartService.cartItems"
+             class="mdl-navigation__link mdl-typography--text-uppercase">
             <span class="mdl-badge mdl-badge--overlap">Cart</span>
           </a>
         </nav>
