@@ -1,42 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~material-design-lite/dist/material.amber-blue.min.css';
 
-.blog-card {
+.company-item {
   display: flex;
-  flex-direction: column;
   margin: 1rem auto;
-  box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.6%;
-  background: #fff;
-  line-height: 1.4;
-  font-family: sans-serif;
-  overflow: hidden;
-  z-index: 0;
   flex-direction: row;
   max-width: 1200px;
 }
-.blog-card a {
+.company-item a {
   color: inherit;
 }
-.blog-card.alt {
+.company-item.alt {
   flex-direction: row-reverse;
 }
-.blog-card.alt .description:before {
+.company-item.alt .description:before {
   left: inherit;
   right: -10px;
   -webkit-transform: skew(3deg);
           transform: skew(3deg);
 }
-.blog-card.alt .details {
+.company-item.alt .details {
   padding-left: 25px;
 }
-.blog-card .meta {
+.company-item .meta {
   position: relative;
   z-index: 0;
   flex-basis: 40%;
   height: auto;
 }
-.blog-card .photo {
+.company-item .photo {
   position: absolute;
   top: 0;
   right: 0;
@@ -48,14 +40,14 @@
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
-.blog-card .description {
+.company-item .description {
   padding: 1rem;
   background: #fff;
   position: relative;
   z-index: 1;
   flex-basis: 60%;
 }
-.blog-card .description:before {
+.company-item .description:before {
   -webkit-transform: skewX(-3deg);
           transform: skewX(-3deg);
   content: "";
@@ -67,43 +59,42 @@
   bottom: 0;
   z-index: -1;
 }
-.blog-card .description h1,
-.blog-card .description h2 {
+.company-item .description h1,
+.company-item .description h2 {
   font-family: Poppins, sans-serif;
 }
-.blog-card .description h1 {
+.company-item .description h1 {
   line-height: 1;
   margin: 0;
   font-size: 1.7rem;
 }
-.blog-card .description h2 {
+.company-item .description h2 {
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
   color: #a2a2a2;
   margin-top: 5px;
 }
-.blog-card .description .read-more {
+.company-item .description .read-more {
   text-align: right;
 }
-.blog-card .description .read-more a {
+.company-item .description .read-more a {
   color: #5ad67d;
   display: inline-block;
   position: relative;
 }
-.blog-card .description .read-more a:after {
+.company-item .description .read-more a:after {
   content: "\f061";
-  font-family: FontAwesome;
   margin-left: -10px;
   opacity: 0;
   vertical-align: middle;
   transition: margin 0.3s, opacity 0.3s;
 }
-.blog-card p {
+.company-item p {
   position: relative;
   margin: 1rem 0 0;
 }
-.blog-card p:first-of-type {
+.company-item p:first-of-type {
   margin-top: 1.25rem;
 }
 
@@ -114,7 +105,8 @@
 }
 
 .shopping-cart {
-  max-width: 800px;
+  margin: 1rem auto;
+  max-width: 1200px;
 }
 
 .company-list {
