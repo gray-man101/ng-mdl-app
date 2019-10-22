@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {NavigationEnd, Router} from "@angular/router";
 import {ShoppingCartService} from "./shopping-cart/shopping-cart.service";
 
 @Component({
@@ -10,12 +9,7 @@ import {ShoppingCartService} from "./shopping-cart/shopping-cart.service";
 export class AppComponent {
   title = 'ng-app';
 
-  constructor(private router: Router, private shoppingCartService: ShoppingCartService) {
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        console.log(event);
-      }
-    });
+  constructor(private shoppingCartService: ShoppingCartService) {
   }
 
 }
