@@ -4,13 +4,13 @@ import {MdlSnackbarService} from "@angular-mdl/core";
 @Injectable()
 export class ShoppingCartService {
 
-  private cartItems: Set<string> = new Set();
+  private _cartItems: Set<string> = new Set();
 
   constructor(private mdlSnackbarService: MdlSnackbarService) {
   }
 
   addToCart(productName: string) {
-    this.cartItems.add(productName);
+    this._cartItems.add(productName);
     this.mdlSnackbarService.showSnackbar({
       message: 'The Message',
       action: {
@@ -23,11 +23,19 @@ export class ShoppingCartService {
   }
 
   removeFromCart(productName: string) {
-    this.cartItems.delete(productName);
+    this._cartItems.delete(productName);
   }
 
   cartContains(productName: string) {
-    return this.cartItems.has(productName);
+    return this._cartItems.has(productName);
   }
 
+
+  get cartItems(): Set<string> {
+    return this._cartItems;
+  }
+
+  clearCartItems() {
+    this._cartItems = new Set();
+  }
 }
